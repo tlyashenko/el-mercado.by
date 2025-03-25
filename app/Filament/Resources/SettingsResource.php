@@ -75,4 +75,9 @@ class SettingsResource extends Resource
             'edit' => Pages\EditSettings::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('Настройки');
+    }
 }

@@ -89,4 +89,14 @@ class CatalogCategoryResource extends Resource
             'edit' => Pages\EditCatalogCategory::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationGroup(): ?string
+    {
+        return __('Каталог');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('Категории');
+    }
 }
