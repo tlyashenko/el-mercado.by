@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="{{ $page->meta_keywords }}">
     <meta name="description" content="{{ $page->meta_description }}" />
+    @foreach($page->og_tags as $tag)
+        <meta property="og:{{ $tag->property }}" content="{{ $tag->content }}"/>
+    @endforeach
     <link rel="icon" type="image/png" href="static/images/general/favicon.png">
     <link rel="shortcut icon" href="static/images/general/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" type="text/css" href="static/css/styles.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
