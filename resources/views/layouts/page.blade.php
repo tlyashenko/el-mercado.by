@@ -8,7 +8,8 @@
     <title>{{ $page->meta_title ?: $page->title }}</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="{{ $page->meta_keywords }}">
+    <meta name="description" content="{{ $page->meta_description }}" />
     <link rel="icon" type="image/png" href="static/images/general/favicon.png">
     <link rel="shortcut icon" href="static/images/general/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" type="text/css" href="static/css/styles.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
