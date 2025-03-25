@@ -124,3 +124,33 @@ $(document).on('click', '.popup__close,.popup-form__close', function (e) {
     lazySizes.init(); // lazySizes применяется при обработке изображений, находящихся на странице.
   }
 })();
+
+$(document).ready(function() {
+    $(".popup-form__btn").click(function(e){
+        e.preventDefault();
+
+        $('.popup__label').removeClass('error');
+
+        const _token = $("input[name='_token']").val();
+        const name = $("input[name='name']").val();
+        const phone = $("input[name='phone']").val();
+        const comment = $("input[name='comment']").val();
+
+        $.ajax({
+            url: "/form",
+            type:'POST',
+            data: { _token, name, phone, comment },
+            success: function(data) {
+                $('.popup-form__close').trigger('click');
+            },
+            error: function (error) {
+                for (const [field, message] of Object.entries(error.responseJSON.errors)) {
+                    const errorDiv = $('#' + field + '-error');
+
+                    //errorDiv.html(message);
+                    errorDiv.parent().addClass('error');
+                }
+            }
+        });
+    });
+});
