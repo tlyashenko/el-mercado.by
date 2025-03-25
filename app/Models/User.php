@@ -7,6 +7,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -28,7 +29,7 @@ use Laravel\Sanctum\HasApiTokens;
  *
  * @package App\Models
  */
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasFactory, Notifiable;
 
