@@ -5,7 +5,7 @@
 <html lang="ru-RU">
 <head>
     <meta charset="utf-8">
-    <title>Mercado</title><!--[if IE]>
+    <title>{{ $page->meta_title ?: $page->title }}</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">

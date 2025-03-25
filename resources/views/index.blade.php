@@ -3,6 +3,8 @@
 @php use App\Modules\Settings\Enums\OptionEnum; @endphp
 @inject('settings', 'App\Modules\Settings\Services\SettingsService')
 
+@section('page', $page)
+
 @section('content')
     <section class="section__header">
         <div class="container">
