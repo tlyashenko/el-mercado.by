@@ -11,7 +11,7 @@
     <meta name="keywords" content="{{ $page->meta_keywords }}">
     <meta name="description" content="{{ $page->meta_description }}" />
     @foreach($page->og_tags as $tag)
-        <meta property="og:{{ $tag->property }}" content="{{ $tag->content }}"/>
+        <meta property="og:{{ $tag['property'] }}" content="{{ $tag['content'] }}"/>
     @endforeach
     <link rel="icon" type="image/png" href="static/images/general/favicon.png">
     <link rel="shortcut icon" href="static/images/general/favicon.svg" type="image/svg+xml">
