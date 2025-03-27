@@ -3,6 +3,6 @@
 @section('page', $page)
 
 @section('content')
-    {{ $page->content }}
+    {!! $page->content !!}
     @widget('categoriesList')
 @endsection
