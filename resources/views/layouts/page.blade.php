@@ -23,6 +23,23 @@
 </head>
 <body class="page-index ">
 
+<section class="section__header">
+    <div class="container">
+        <picture class="header__img">
+            <source media="(min-width: 768px)" srcset="static/images/content/header.webp"><img data-src="static/images/content/header--mobile.webp" alt="Mercado" loading="lazy">
+        </picture>
+        <div class="header__desc">
+            <div class="header__top"> <img class="header__logo" src="static/images/general/logo.svg" alt="Mercado" width="132" height="121"><a class="header__phone" href="tel:+375 29 699 93 62"> <img src="static/images/general/phone.svg" alt="Mercado" width="18" height="18">{{ $settings->getOption(OptionEnum::PHONE) }}</a></div>
+            <h1>Вкус Испании и Италии у вас дома</h1>
+            <div class="header__intro">
+                <p>Mercado — это изысканные мясные деликатесы прямо из сердца Испании и Италии. Хамон, выдержанная ветчина, ароматные колбасы — мы привозим лучшее, чтобы вы могли насладиться подлинным вкусом Средиземноморья. </p>
+                <p>Ознакомьтесь с нашим каталогом и откройте мир гастрономических удовольствий!</p>
+            </div>
+            <div class="header__button"> <a class="btn header__btn" target="_blank" href="{{ $settings->getOption(OptionEnum::TELEGRAM) }}"> <img class="svg" src="static/images/content/logo_icon.svg" alt="Mercado">Купить через Telegram</a><a class="btn btn--transparent header__btn open__popup" href="#popup__call">Обратный звонок</a></div>
+        </div>
+    </div>
+</section>
+
 @yield('content')
 
 <footer class="footer">
@@ -51,34 +68,8 @@
         </div>
     </div>
 </footer>
-<div class="overlay"></div>
-<div class="popup" id="popup__call"><a class="popup__close" href="#"> <img src="static/images/general/close.svg" alt=""></a>
-    <div class="popup__title">Обратный звонок</div>
-    <div class="popup__desc">Оставьте контакт, и мы перезвоним вам в удобное для вас время, чтобы рассказать о продукции!</div>
 
-    <form class="form">
-        {{ csrf_field() }}
-        <label class="popup__label">
-            <input class="popup__input" name="name" type="text" placeholder="Ваше имя">
-            <div class="error__label" id="name-error">Введите Ваше имя</div>
-        </label>
-        <label class="popup__label">
-            <input class="popup__input" name="phone" type="tel" placeholder="+375 __ ___ __ __">
-            <div class="error__label" id="phone-error">Введите Ваш номер телефона</div>
-        </label>
-        <label class="popup__label">
-            <textarea class="popup__textarea" name="comment" placeholder="Комментарий (не обязательно)"></textarea>
-            <div class="error__label" id="comment-error"></div>
-        </label>
-        <button class="btn popup-form__btn" type="submit">Отправить</button>
-    </form>
-</div>
-
-<div class="popup__thanks" dis><a class="popup__close" href="#"> <img src="static/images/general/close.svg" alt=""></a>
-    <div class="popup__title">Обратный звонок</div>
-    <div class="popup__desc">Спасибо! Ваш запрос отправлен. Мы перезвоним вам в ближайшее время. Или заказывайте в <a href="https://t.me/@MercadoBot">@MercadoBot.</a></div>
-    <button class="btn popup-form__btn popup-form__close" type="submit">Закрыть</button>
-</div>
+@widget('feedbackModal')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="static/js/libs.min.js"></script>
