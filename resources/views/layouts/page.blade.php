@@ -30,10 +30,18 @@
         </picture>
         <div class="header__desc">
             <div class="header__top"> <img class="header__logo" src="static/images/general/logo.svg" alt="Mercado" width="132" height="121"><a class="header__phone" href="tel:+375 29 699 93 62"> <img src="static/images/general/phone.svg" alt="Mercado" width="18" height="18">{{ $settings->getOption(OptionEnum::PHONE) }}</a></div>
-            <h1>Вкус Испании и Италии у вас дома</h1>
+            <h1>Купите хамон и сыры в Минске с доставкой на дом</h1>
             <div class="header__intro">
-                <p>Mercado — это изысканные мясные деликатесы прямо из сердца Испании и Италии. Хамон, выдержанная ветчина, ароматные колбасы — мы привозим лучшее, чтобы вы могли насладиться подлинным вкусом Средиземноморья. </p>
-                <p>Ознакомьтесь с нашим каталогом и откройте мир гастрономических удовольствий!</p>
+                <p>Ищете, где купить хамон в Минске? Мы предлагаем вам изысканные сорта хамона и сыров прямо из Европы. Наши деликатесы – это не просто продукты, это настоящий гастрономический опыт, который привнесет в вашу жизнь вкус Европы.</p>
+                <p><strong>Почему стоит купить хамон у нас?</strong></p>
+                <ul>
+                    <li>
+                        <strong>Качество, проверенное временем:</strong> Мы сотрудничаем только с лучшими производителями хамона в Испании, предлагая вам уникальные сорта, такие как Иберико и Серрано.
+                    </li>
+                    <li>
+                        <strong>Элитные продукты:</strong> Наши хамоны и сыры – это премиум-класса продукты, созданные с уважением к традициям и современным стандартам.
+                    </li>
+                </ul>
             </div>
             <div class="header__button"> <a class="btn header__btn" target="_blank" href="{{ $settings->getOption(OptionEnum::TELEGRAM) }}"> <img class="svg" src="static/images/content/logo_icon.svg" alt="Mercado">Купить через Telegram</a><a class="btn btn--transparent header__btn open__popup" href="#popup__call">Обратный звонок</a></div>
         </div>

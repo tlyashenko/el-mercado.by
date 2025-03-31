@@ -1053,6 +1053,7 @@ h3, .h2 {
   position: relative;
   z-index: 3; }
   .header__desc h1 {
+      font-size: 42px;
     margin-bottom: 24px; }
   @media (max-width: 767px) {
     .header__desc {
@@ -1198,7 +1199,7 @@ h3, .h2 {
 .why__title {
   font-size: var(--font-h2-size);
   font-weight: var(--font-h2-weight);
-  line-height: var(--font-h2-line);
+  line-height: 50px;
   margin-bottom: 69px;
   text-align: center; }
   @media (max-width: 767px) {
