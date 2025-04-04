@@ -9,6 +9,7 @@
                     <img class="catalog__img" data-src="{{ Storage::url($category->image) }}"
                          alt="{{ $category->title }}">
                     <div class="catalog__title">{{ $category->title }}</div>
+                    <div class="catalog__description">{{ $category->description }}</div>
                 </div>
             @endforeach
         </div>
